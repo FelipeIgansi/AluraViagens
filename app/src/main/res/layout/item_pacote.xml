@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
         android:id="@+id/imgItemPacote"
@@ -13,14 +14,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        android:src="@drawable/sao_paulo_sp"
+        tools:src="@sample/pacotes.json/pacotes/imagem"
         android:scaleType="centerCrop"
         />
     <TextView
         android:id="@+id/txtItemPacote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="São Paulo"
+        tools:text="@sample/pacotes.json/pacotes/local"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/imgItemPacote"
@@ -48,7 +49,7 @@
         android:id="@+id/txtDias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2 Dias"
+        tools:text="@sample/pacotes.json/pacotes/dias"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divisor"
@@ -61,7 +62,7 @@
         android:id="@+id/txtPreco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="R$ 243,99"
+        tools:text="@sample/pacotes.json/pacotes/preco"
         app:layout_constraintTop_toBottomOf="@id/txtDias"
         app:layout_constraintStart_toStartOf="@id/txtDias"
         android:textSize="20sp"

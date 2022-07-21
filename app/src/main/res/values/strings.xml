@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AluraViagens</string>
+    <string name="especiais">Especiais</string>
+    <string name="brasil">Brasil</string>
 </resources>
