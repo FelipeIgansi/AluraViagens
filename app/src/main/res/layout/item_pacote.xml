@@ -35,7 +35,7 @@
                 tools:src="@sample/pacotes.json/pacotes/imagem" />
 
             <TextView
-                android:id="@+id/txtItemPacote"
+                android:id="@+id/txtLocal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
