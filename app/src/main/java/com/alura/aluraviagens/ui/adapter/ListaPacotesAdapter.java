@@ -10,10 +10,16 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.core.content.res.ResourcesCompat;
+
 import com.alura.aluraviagens.R;
 import com.alura.aluraviagens.model.Pacote;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
 
 public class ListaPacotesAdapter extends BaseAdapter {
     private final List<Pacote> pacotes;
@@ -54,14 +60,27 @@ public class ListaPacotesAdapter extends BaseAdapter {
         // local onde elá está localizada e o package onde está armazenado
         int idDrawable = resources.getIdentifier(pacote.getImagem(),
                 "drawable", context.getPackageName());
-        Drawable drawableImagemPacote = resources.getDrawable(idDrawable);
+        Drawable drawableImagemPacote = ResourcesCompat.getDrawable(resources, idDrawable, null);
         imagem.setImageDrawable(drawableImagemPacote);
 
         TextView dias = viewCriada.findViewById(R.id.txtDias);
-        dias.setText(pacote.getDias()+" dias");
+        String labelDias = "";
+        int qtnDias = pacote.getDias();
+        if (qtnDias >1){
+            labelDias = qtnDias + " dias";
+        }else {
+            labelDias = qtnDias + " dia";
+        }
+        dias.setText(labelDias);
+
+        BigDecimal precoDoPacote = pacote.getPreco();
 
         TextView preco = viewCriada.findViewById(R.id.txtPreco);
-        preco.setText(pacote.getPreco().toString());
+        NumberFormat formatoBrasileiro = DecimalFormat.getCurrencyInstance(new Locale("pt", "br"));
+
+        String moedaBrasileiraFormatada =
+                formatoBrasileiro.format(precoDoPacote).replace("R$", "R$ ");
+        preco.setText(moedaBrasileiraFormatada);
 
         return viewCriada;
     }

@@ -7,11 +7,11 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\lipei\.android\avd\Pixel_2_API_21.avd" />
+            <value value="C:\Users\lipei\.android\avd\GalaxyS22_API_23.avd" />
           </Key>
         </deviceKey>
       </Target>
     </targetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2022-07-27T20:29:56.559153200Z" />
+    <timeTargetWasSelectedWithDropDown value="2022-07-27T21:21:46.226715Z" />
   </component>
 </project>
