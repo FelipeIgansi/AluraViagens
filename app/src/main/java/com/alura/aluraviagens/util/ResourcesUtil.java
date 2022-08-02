@@ -7,8 +7,6 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.Nullable;
 import androidx.core.content.res.ResourcesCompat;
 
-import com.alura.aluraviagens.model.Pacote;
-
 public class ResourcesUtil {
 
     public static final String DRAWABLE = "drawable";
