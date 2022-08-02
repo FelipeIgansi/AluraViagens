@@ -14,7 +14,7 @@ public class PacoteDAO {
             new Pacote("Belo Horizonte", "belo_horizonte_mg", 3, new BigDecimal(421.50)),
             new Pacote("Recife", "recife_pe", 4, new BigDecimal(754.20)),
             new Pacote("Rio de Janeiro", "salvador_ba", 5, new BigDecimal(899.99)),
-            new Pacote("Foz do iguaçu", "foz_iguacu", 1, new BigDecimal(289.90))
+            new Pacote("Foz do iguaçu", "foz_do_iguacu_pr", 1, new BigDecimal(289.90))
 
         ));
         return pacotes;

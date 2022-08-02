@@ -1,5 +1,6 @@
 package com.alura.aluraviagens.ui.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
@@ -54,13 +55,10 @@ public class ListaPacotesAdapter extends BaseAdapter {
         local.setText(pacote.getLocal());
 
         ImageView imagem = viewCriada.findViewById(R.id.imgItemPacote);
-        // Para poder usar a imagem primeiro precisa do resources
         Resources resources = context.getResources();
-        // A partir do resources terá acesso a imagem passando como parametro: nome,
-        // local onde elá está localizada e o package onde está armazenado
-        int idDrawable = resources.getIdentifier(pacote.getImagem(),
-                "drawable", context.getPackageName());
-        Drawable drawableImagemPacote = ResourcesCompat.getDrawable(resources, idDrawable, null);
+        int idDoDrawable = resources.getIdentifier(pacote.getImagem()
+                , "drawable", context.getPackageName());
+        Drawable drawableImagemPacote = ResourcesCompat.getDrawable(resources, idDoDrawable, null);
         imagem.setImageDrawable(drawableImagemPacote);
 
         TextView dias = viewCriada.findViewById(R.id.txtDias);
