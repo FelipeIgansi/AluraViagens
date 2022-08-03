@@ -56,25 +56,25 @@ public class ListaPacotesAdapter extends BaseAdapter {
     }
 
     private void mostraPreco(View viewCriada, Pacote pacote) {
-        TextView preco = viewCriada.findViewById(R.id.txtPreco);
+        TextView preco = viewCriada.findViewById(R.id.ItemPacote_txtPreco);
         String moedaBrasileiraFormatada = MoedaUtil.formataPara_MoedaReal(pacote.getPreco());
         preco.setText(moedaBrasileiraFormatada);
     }
 
     private void mostraDias(View viewCriada, Pacote pacote) {
-        TextView dias = viewCriada.findViewById(R.id.txtDias);
+        TextView dias = viewCriada.findViewById(R.id.ItemPacote_txtDias);
         String labelDias = DiasUtil.formataEmTexto(pacote.getDias());
         dias.setText(labelDias);
     }
 
     private void mostraImagem(View viewCriada, Pacote pacote) {
-        ImageView imagem = viewCriada.findViewById(R.id.imgItemPacote);
+        ImageView imagem = viewCriada.findViewById(R.id.ItemPacote_img);
         Drawable drawableImagemPacote = ResourcesUtil.devolveDrawable(context, pacote.getImagem());
         imagem.setImageDrawable(drawableImagemPacote);
     }
 
     private void mostraLocal(View viewCriada, Pacote pacote) {
-        TextView local = viewCriada.findViewById(R.id.txtLocal);
+        TextView local = viewCriada.findViewById(R.id.ItemPacote_txtLocal);
         local.setText(pacote.getLocal());
     }
 }

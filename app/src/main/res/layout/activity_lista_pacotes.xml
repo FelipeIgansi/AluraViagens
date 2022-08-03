@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/img_ListaPacotes_banner_inicial"
+        android:id="@+id/ListaPacotes_img_banner_inicial"
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:layout_marginBottom="291dp"
@@ -26,11 +26,11 @@
         android:text="@string/especiais"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@id/img_ListaPacotes_banner_inicial"
-        app:layout_constraintEnd_toEndOf="@id/img_ListaPacotes_banner_inicial"
+        app:layout_constraintBottom_toBottomOf="@id/ListaPacotes_img_banner_inicial"
+        app:layout_constraintEnd_toEndOf="@id/ListaPacotes_img_banner_inicial"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/img_ListaPacotes_banner_inicial"
-        app:layout_constraintTop_toTopOf="@id/img_ListaPacotes_banner_inicial"
+        app:layout_constraintStart_toStartOf="@id/ListaPacotes_img_banner_inicial"
+        app:layout_constraintTop_toTopOf="@id/ListaPacotes_img_banner_inicial"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -47,7 +47,7 @@
 
 
     <ListView
-        android:id="@+id/listaPacotes_listView"
+        android:id="@+id/ListaPacotes_listview"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:divider="@null"
@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_ListaPacotes_banner_inicial"
+        app:layout_constraintTop_toBottomOf="@id/ListaPacotes_img_banner_inicial"
         app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/item_pacote" />
 
