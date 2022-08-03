@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ResumoPacoteActivity">
+
+
+    <ImageView
+        android:id="@+id/resumoPacote_imgLocalPacote"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/sao_paulo_sp" />
+
+    <TextView
+        android:id="@+id/resumoPacote_txtLocalPacote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resumoPacote_imgLocalPacote"
+        tools:text="São Paulo" />
+
+    <TextView
+        android:id="@+id/resumoPacote_txtDiasPacote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/resumoPacote_txtLocalPacote"
+        app:layout_constraintTop_toBottomOf="@+id/resumoPacote_txtLocalPacote"
+        tools:text="2 dias" />
+
+    <TextView
+        android:id="@+id/resumoPacote_txtDataPacote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/resumoPacote_txtDiasPacote"
+        app:layout_constraintTop_toBottomOf="@+id/resumoPacote_txtDiasPacote"
+        tools:text="08/12 - 10/12 de 2022" />
+
+    <TextView
+        android:id="@+id/resumoPacote_txtLabelPrecoFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/resumoPacote_txtPreco"
+        app:layout_constraintEnd_toEndOf="@+id/resumoPacote_txtPreco"
+        tools:text="Preço Final:" />
+
+    <TextView
+        android:id="@+id/resumoPacote_txtPreco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/resumoPacote_txtDataPacote"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="TextContrastCheck"
+        tools:text="R$ 243,99" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resumoPacote_btnPagar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/botao_retangular_arrendondado_laranja"
+        android:text="Realizar pagamento"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resumoPacote_imgLocalPacote"
+        app:layout_constraintVertical_bias="0.97" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
