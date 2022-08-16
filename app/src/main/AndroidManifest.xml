@@ -14,16 +14,19 @@
         android:theme="@style/Theme.AluraViagens"
         tools:targetApi="31">
         <activity
-            android:name=".ResumoPacoteActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.activity.ListaPacotesActivity"
+            android:name=".ui.activity.ResumoPacoteActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.ListaPacotesActivity"
+            android:exported="false">
+
         </activity>
     </application>
 
