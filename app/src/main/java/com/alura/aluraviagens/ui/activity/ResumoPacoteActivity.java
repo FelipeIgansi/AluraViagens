@@ -5,6 +5,7 @@ import static com.alura.aluraviagens.util.DataUtil.formataPeriodoExibido;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -38,7 +39,8 @@ public class ResumoPacoteActivity extends AppCompatActivity {
         mostraPreco(pacoteSP);
         mostraData(pacoteSP);
 
-
+        Intent intent = new Intent(this, PagamentoActivity.class);
+        startActivity(intent);
     }
 
     private void mostraData(@NonNull Pacote pacote) {
@@ -46,8 +48,6 @@ public class ResumoPacoteActivity extends AppCompatActivity {
         String dataFormatadaViagem = formataPeriodoExibido(pacote.getDias());
         data.setText(dataFormatadaViagem);
     }
-
-
 
     private void mostraPreco(@NonNull Pacote pacote) {
         TextView preco = findViewById(R.id.resumoPacote_txtPreco);

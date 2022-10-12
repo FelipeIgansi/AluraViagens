@@ -2,6 +2,7 @@ package com.alura.aluraviagens.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 
@@ -24,8 +25,8 @@ public class ListaPacotesActivity extends AppCompatActivity {
 
         configuraLista();
 
-//        Intent intent = new Intent(this, ResumoPacoteActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(this, ResumoPacoteActivity.class);
+        startActivity(intent);
 
 
     }
