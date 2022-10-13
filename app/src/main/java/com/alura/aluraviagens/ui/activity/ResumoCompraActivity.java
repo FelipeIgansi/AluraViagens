@@ -1,24 +1,20 @@
 package com.alura.aluraviagens.ui.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static com.alura.aluraviagens.ui.activity.PacoteActivityConstantes.CHAVE_PACOTE;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.alura.aluraviagens.R;
 import com.alura.aluraviagens.model.Pacote;
 import com.alura.aluraviagens.util.DataUtil;
 import com.alura.aluraviagens.util.MoedaUtil;
 import com.alura.aluraviagens.util.ResourcesUtil;
-
-import org.w3c.dom.Text;
-
-import java.io.Serializable;
-import java.math.BigDecimal;
 
 public class ResumoCompraActivity extends AppCompatActivity {
 
@@ -28,18 +24,23 @@ public class ResumoCompraActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resumo_compra);
-
         setTitle(TITULO_APPBAR);
+        carregaPacoteRecebido();
+    }
 
+    private void carregaPacoteRecebido() {
         Intent intent = getIntent();
-        if (intent.hasExtra("pacote")){
-            Pacote pacote = (Pacote) intent.getSerializableExtra("pacote");
-
-            mostraLocal(pacote);
-            mostraImagem(pacote);
-            mostraData(pacote);
-            mostraPreco(pacote);
+        if (intent.hasExtra(CHAVE_PACOTE)) {
+            Pacote pacote = (Pacote) intent.getSerializableExtra(CHAVE_PACOTE);
+            inicializaCampos(pacote);
         }
+    }
+
+    private void inicializaCampos(Pacote pacote) {
+        mostraLocal(pacote);
+        mostraImagem(pacote);
+        mostraData(pacote);
+        mostraPreco(pacote);
     }
 
     private void mostraPreco(Pacote pacote) {
