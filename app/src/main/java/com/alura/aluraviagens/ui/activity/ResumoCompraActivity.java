@@ -17,6 +17,7 @@ import com.alura.aluraviagens.util.ResourcesUtil;
 
 import org.w3c.dom.Text;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 public class ResumoCompraActivity extends AppCompatActivity {
@@ -30,13 +31,15 @@ public class ResumoCompraActivity extends AppCompatActivity {
 
         setTitle(TITULO_APPBAR);
 
-        Pacote pacoteSP = new Pacote("São Paulo", "sao_paulo_sp", 2, new BigDecimal(243.99));
+        Intent intent = getIntent();
+        if (intent.hasExtra("pacote")){
+            Pacote pacote = (Pacote) intent.getSerializableExtra("pacote");
 
-        mostraLocal(pacoteSP);
-        mostraImagem(pacoteSP);
-        mostraData(pacoteSP);
-        mostraPreco(pacoteSP);
-
+            mostraLocal(pacote);
+            mostraImagem(pacote);
+            mostraData(pacote);
+            mostraPreco(pacote);
+        }
     }
 
     private void mostraPreco(Pacote pacote) {
