@@ -9,10 +9,8 @@
         android:id="@+id/pagamento_orientacao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="Digite as informações do cartão de crédito que você deseja usar para o pagamento"
+        android:layout_margin="20dp"
+        android:text="@string/orientacao_pagamento"
         android:textAlignment="center"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -25,8 +23,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="20dp"
-        android:text="Valor da compra: "
+        android:text="@string/valorCompra"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pagamento_orientacao" />
 
@@ -35,87 +34,101 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="R$ 421,50"
+        tools:text="R$ 421,50"
         android:textColor="@android:color/holo_green_light"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/pagamento_TxtValorCompra"
-        app:layout_constraintTop_toBottomOf="@+id/pagamento_TxtValorCompra" />
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_TxtValorCompra"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/pagamento_EditText_NumeroCartao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:hint="Número do cartão"
+        android:layout_margin="8dp"
+        android:hint="@string/numeroCartao"
+        android:maxLength="12"
         android:inputType="number"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/pagamento_TxtPreco"
-        app:layout_constraintTop_toBottomOf="@+id/pagamento_TxtPreco" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_TxtPreco"
+        tools:ignore="TextContrastCheck"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/pagamento_EditText_MesCartao"
-        android:layout_width="40dp"
+        android:layout_width="48dp"
         android:layout_height="wrap_content"
-        android:hint="MM"
+        android:hint="@string/mascara_MesCartao"
         android:inputType="number"
         android:maxLength="2"
+        android:minHeight="48dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/pagamento_EditText_CVCCartao"
-        app:layout_constraintStart_toStartOf="@id/pagamento_EditText_NumeroCartao" />
+        app:layout_constraintStart_toStartOf="@id/pagamento_EditText_NumeroCartao"
+        tools:ignore="TextContrastCheck"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/pagamento_EditText_AnoCartao"
-        android:layout_width="40dp"
+        android:layout_width="48dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:hint="AA"
+        android:hint="@string/mascara_AnoCartao"
         android:inputType="number"
         android:maxLength="2"
+        android:minHeight="48dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/pagamento_EditText_CVCCartao"
-        app:layout_constraintStart_toEndOf="@id/pagamento_EditText_MesCartao" />
+        app:layout_constraintStart_toEndOf="@id/pagamento_EditText_MesCartao"
+        tools:ignore="TextContrastCheck"
+        android:importantForAutofill="no" />
 
 
     <EditText
         android:id="@+id/pagamento_EditText_CVCCartao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/ic_cvc_cartao_de_credito"
+        android:hint="@string/mascara_CVCCartao"
         android:inputType="number"
         android:maxLength="3"
-        android:hint="CVC"
         android:textAlignment="center"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
         app:layout_constraintEnd_toEndOf="@id/pagamento_EditText_NumeroCartao"
         app:layout_constraintTop_toBottomOf="@id/pagamento_EditText_NumeroCartao"
-        android:drawableStart="@drawable/ic_cvc_cartao_de_credito"
-        />
+        tools:ignore="TextContrastCheck"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/pagamento_EditText_NomeCartao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Nome no cartão"
-        android:inputType="text"
         android:layout_marginTop="8dp"
+        android:hint="@string/nomeCartao"
+        android:inputType="text"
+        android:digits="@string/digitosAceitosNoNomeCartao"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="@id/pagamento_EditText_NumeroCartao"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/pagamento_EditText_NumeroCartao"
-        app:layout_constraintTop_toBottomOf="@+id/pagamento_EditText_CVCCartao" />
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_EditText_CVCCartao"
+        tools:ignore="TextContrastCheck"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/pagamento_BtnFinalizarCompra"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Finalizar Compra"
-        android:textColor="@color/white"
         android:background="@drawable/botao_retangular_arrendondado_laranja"
+        android:text="@string/finalizarCompra"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/pagamento_EditText_NomeCartao"
         app:layout_constraintStart_toStartOf="@+id/pagamento_EditText_NomeCartao"
         app:layout_constraintTop_toBottomOf="@+id/pagamento_EditText_NomeCartao"
-        app:layout_constraintEnd_toEndOf="@id/pagamento_EditText_NomeCartao"/>
+        tools:ignore="TextContrastCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
